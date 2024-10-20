@@ -15,7 +15,6 @@
         manifest_nfc.xml
         manifest_km41.xml
         manifest_tee.xml
-        manifest.microtrust.isee400.xml
         manifest_log.xml
         manifest_mdmonitor.xml
         manifest_aee.xml
@@ -646,16 +645,6 @@
     <hal format="aidl">
         <name>android.hardware.vibrator</name>
         <fqname>IVibrator/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.xiaomi.hardware.touchfeature</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ITouchFeature</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::ITouchFeature/default</fqname>
     </hal>
     <sepolicy>
         <version>31.0</version>
