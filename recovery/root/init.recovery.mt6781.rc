@@ -70,6 +70,14 @@ service health-hal-2-1 /system/bin/hw/android.hardware.health@2.1-service
     capabilities WAKE_ALARM BLOCK_SUSPEND
     file /dev/kmsg w
 
+service vendor.boot-hal-1-2 /system/bin/hw/android.hardware.boot@1.2-service
+    interface android.hardware.boot@1.0::IBootControl default
+    interface android.hardware.boot@1.1::IBootControl default
+    interface android.hardware.boot@1.2::IBootControl default
+    class early_hal
+    user root
+    group root
+
 on property:vendor.sys.listener.registered=true
     start gatekeeper-1-0
     start keymaster-4-1
